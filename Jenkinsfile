@@ -7,7 +7,6 @@ pipeline {
   }
   environment {
     CI = 'true'
-    APP_PATH = '/home/Documents/Projects/simple-node-js-react-npm-app'
   }
   stages {
     stage('Build') {
