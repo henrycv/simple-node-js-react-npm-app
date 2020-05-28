@@ -7,6 +7,7 @@ pipeline {
   }
   environment {
     CI = 'true'
+    APP_PATH = '/home/Documents/Projects/simple-node-js-react-npm-app'
   }
   stages {
     stage('Build') {
@@ -16,7 +17,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh './jenkins/script/test.sh'
+        sh '${APP_PATH}/jenkins/script/test.sh'
       }
     }
   }
